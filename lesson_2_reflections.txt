@@ -3,6 +3,9 @@ git add             #Add files to staging area
 git status          #Get status of added files and other info
 staging area        #Where things are placed before making a commit
 working directory   #Location(directory) of work
+git diff 			#Without any args, this will compare the working directory to the staging area
+git diff --staged   #Compares the staging area to the most recent commit
+git reset --hard    #Gets rid of any changes made in the working directory or staging area
 
 
 ***********************************REFLECTIONS*************************************
