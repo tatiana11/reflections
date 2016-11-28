@@ -3,9 +3,17 @@ git add             #Add files to staging area
 git status          #Get status of added files and other info
 staging area        #Where things are placed before making a commit
 working directory   #Location(directory) of work
+
 git diff 			#Without any args, this will compare the working directory to the staging area
 git diff --staged   #Compares the staging area to the most recent commit
 git reset --hard    #Gets rid of any changes made in the working directory or staging area
+
+git branch 			#Shows current branches
+git branch <name>   #Creates a new branch called <name>
+git checkout <name> #Switches current branch to <name>
+
+git log --graph --oneline branch1 branch2  #Look at logs for specified branches
+git checkout -b new_branch                 #Creates a new branch and checks it out
 
 
 ***********************************REFLECTIONS*************************************
@@ -27,7 +35,11 @@ change?
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+	When you want to add a new feature, branching is helpful to add the feature and test it in order to make sure you want to add it to the actual code.
+
 How do the diagrams help you visualize the branch structure?
+
+	It helps keep track of branches that were made so that you don't lose track of any of them.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
