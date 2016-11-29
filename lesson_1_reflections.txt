@@ -18,15 +18,16 @@ git checkout commitid_to_restore #Temporarily reset all files in a directory to 
 
 ************************REFLECTIONS********************************
 
-How did viewing a diff between two versions of a file help you see the bug that was introduced?
+1. How did viewing a diff between two versions of a file help you see the bug that was introduced?
 
     It is an easy and fast way to pinpoint the exact changes that occured and find the error or typo.
 
-How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+2. How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
 	
 	You can always go back to previous versions
 
-What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+3. What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like 
+   Google Docs does?
 
 	Pros:
 	- Can save when finishing a specific task
@@ -34,18 +35,19 @@ What do you think are the pros and cons of manually choosing when to create a co
 	- Can automatically save in the middle of performing a task and not quite finishing it yet
 	- Can forget to save after too long of a time
 
-Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+4. Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file 
+   separately?
 
 	The files can be related and interchangeable within each other.
 
-How can you use the commands git log and git diff to view the history of files?
+5. How can you use the commands git log and git diff to view the history of files?
 	
 	This is self explanatory
 
-How might using version control make you more confident to make changes that could break something?
+6. How might using version control make you more confident to make changes that could break something?
 
 	You are always safe because you can always go back to previous version.
 
-Now that you have your workspace set up, what do you want to try using Git for?
+7. Now that you have your workspace set up, what do you want to try using Git for?
 
 	Sharing and creating code with others.
