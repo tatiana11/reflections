@@ -18,6 +18,7 @@ git checkout -b new_branch                 #Creates a new branch and checks it o
 git gc                     #Run the garbage collector (will get rid of unreachable commits)
 git merge branch1 branch2  #Merge two branches 
 git show                   #Show changes made from a commit compared to its parent
+git branch -d branch_name  #Deletes specified branch
 
 Merge conflict
 If you get a message like this
@@ -44,33 +45,38 @@ To fix this, Windows users should set the global autocrlf attribute to true: git
 
 ***********************************REFLECTIONS*************************************
 
-What happens when you initialize a repository? Why do you need to do it?
+1. What happens when you initialize a repository? Why do you need to do it?
 
 	It initializes or creates a git repository. This is used if you want to create a new repository on your own and not clone an already existing one.
 
-How is the staging area different from the working directory and the repository?
-What value do you think it offers?
+2. How is the staging area different from the working directory and the repository?
+   What value do you think it offers?
 
 	The staging area only holds the files that you added to it and when making a commit, only the files that were added to this area get commited.
 
-How can you use the staging area to make sure you have one commit per logical
-change?
+3. How can you use the staging area to make sure you have one commit per logical
+   change?
 
 	It can help by adding a changed file once your logical change has been implemented and then commiting that change.
 
-What are some situations when branches would be helpful in keeping your history
-organized? How would branches help?
+4. What are some situations when branches would be helpful in keeping your history
+   organized? How would branches help?
 
 	When you want to add a new feature, branching is helpful to add the feature and test it in order to make sure you want to add it to the actual code.
 
-How do the diagrams help you visualize the branch structure?
+5. How do the diagrams help you visualize the branch structure?
 
 	It helps keep track of branches that were made so that you don't lose track of any of them.
 
-What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
+6. What is the result of merging two branches together? Why do we represent it in
+   the diagram the way we do?
 
 	Merging branches combines the work from both branches into one branch, so that your new feature is added or your bug was fixed.
 
-What are the pros and cons of Git’s automatic merging vs. always doing merges
-manually?
+7. What are the pros and cons of Git’s automatic merging vs. always doing merges
+   manually?
+
+    Pros:
+      -It's nice to have auto merging when working on separate sections of code
+      -It's good that conflicting lines of code won't get automatically changed and allow the users to resolve the conflicts themselves
+    Cons:
