@@ -15,6 +15,32 @@ git checkout <name> #Switches current branch to <name>
 git log --graph --oneline branch1 branch2  #Look at logs for specified branches
 git checkout -b new_branch                 #Creates a new branch and checks it out
 
+git gc                     #Run the garbage collector (will get rid of unreachable commits)
+git merge branch1 branch2  #Merge two branches 
+git show                   #Show changes made from a commit compared to its parent
+
+Merge conflict
+If you get a message like this
+
+	Auto-merging game.js
+	CONFLICT (content): Merge conflict in game.js
+	Automatic merge failed; fix conflicts and then commit the result.
+
+then your files were not in the same state as Caroline's when you started the merge. To fix this, complete the following steps:
+1. Restore your files to their state before you started the merge by running git merge --abort
+2. Double check the state of your files. If you run git log while the master branch is checked out, you should see Caroline's "Add color" commit as the
+   second-most-recent, and the most recent should be your commit fixing the bullet bug. If you use git diff to compare your commit to Caroline's, your commit should introduce the line this.delayBeforeBullet = 10; on line 424. The line should be indented to the same level as the line below it using only spaces (no tabs), and the line should have no spaces after it.
+3. Once your file is in the correct state, create a new commit with your changes.
+4. Try the merge again.
+
+***********************************************************************************
+Merge conflict (Newline characters between Windows and Unix systems)
+Context: Whenever we hit the "Enter" key on the keyboard, we are actually telling the computer to insert an invisible character into our text file to indicate to the computer that there should be a new line. Unix systems adds one character called the "line feed" character or LF or \n while Windows systems adds two characters, "carriage return" and "line feed" or CRLF or \r\n.
+
+Caroline's files have LF because her files were edited on Mac OSX, which uses LF. If a Windows user were to edit Caroline's files, the Windows text editor might convert all LF to CRLF to make editing files possible. When the Windows user merges her file with Caroline's files, a merge conflict will result due to the different LF and CRLF characters.
+
+To fix this, Windows users should set the global autocrlf attribute to true: git config --global core.autocrlf true. More information can be found here: https://help.github.com/articles/dealing-with-line-endings/#platform-all                               
+
 
 ***********************************REFLECTIONS*************************************
 
@@ -43,6 +69,8 @@ How do the diagrams help you visualize the branch structure?
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
+
+	Merging branches combines the work from both branches into one branch, so that your new feature is added or your bug was fixed.
 
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
